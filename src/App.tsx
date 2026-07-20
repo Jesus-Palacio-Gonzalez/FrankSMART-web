@@ -105,7 +105,7 @@ function App() {
             </div>
           </div>
 
-          <div className="mt-6 flex animate-fade-up-delay-4 flex-wrap gap-6 sm:mt-8 sm:gap-12 lg:mt-10 lg:gap-16">
+          <div className="mt-6 grid animate-fade-up-delay-4 grid-cols-2 gap-x-6 gap-y-6 sm:mt-8 sm:flex sm:flex-wrap sm:gap-12 lg:mt-10 lg:gap-16">
             {[
               { value: "+150", label: "Clientes Satisfechos." },
               { value: "+300", label: "Accesos Configurados." },
