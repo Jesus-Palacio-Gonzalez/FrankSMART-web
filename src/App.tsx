@@ -83,7 +83,7 @@ function App() {
             </span>
           </h1>
 
-          <p className="mt-4 max-w-md animate-fade-up-delay-2 font-inter text-sm leading-relaxed text-muted sm:text-base lg:mt-6">
+          <p className="mt-4 max-w-md animate-fade-up-delay-2 font-inter text-sm leading-relaxed text-foreground sm:text-base lg:mt-6">
             Franklin Palacio, especialista en cerraduras digitales TTLock y Tuya para hogares, oficinas y empresas.
             <br />
             <br />
