@@ -1,13 +1,7 @@
 import { useState } from "react";
 import { ArrowUpRight, Award, Crown, X } from "lucide-react";
 import { buildWhatsAppLink } from "./lib/whatsapp";
-
-const NAV_LINKS = [
-  { label: "Proyectos", href: "#proyectos" },
-  { label: "Acerca de mi", href: "#acerca" },
-  { label: "Ofertas", href: "#ofertas" },
-  { label: "Soporte", href: "#soporte" },
-];
+import { NAV_LINKS } from "./lib/navLinks";
 
 const VIDEO_URL = "/herosection.mp4";
 

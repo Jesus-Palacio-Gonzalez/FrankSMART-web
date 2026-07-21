@@ -3,6 +3,7 @@ import AboutSection from "./AboutSection";
 import ProjectsSection from "./ProjectsSection";
 import OffersSection from "./OffersSection";
 import SupportSection from "./SupportSection";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <ProjectsSection />
       <OffersSection />
       <SupportSection />
+      <Footer />
     </div>
   );
 }
