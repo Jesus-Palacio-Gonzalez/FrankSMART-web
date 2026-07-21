@@ -55,7 +55,7 @@ function Footer() {
             </a>
 
             <p className="flex items-center gap-1.5 font-inter text-xs text-muted">
-              Hecho con
+              Con
               <Heart className="h-3.5 w-3.5 fill-accent text-accent" />
               by{" "}
               <span className="font-semibold text-foreground">
