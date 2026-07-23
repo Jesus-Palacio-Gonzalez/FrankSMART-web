@@ -13,7 +13,7 @@ const PRODUCTS = [
   {
     brand: "TTLock",
     model: "G3 Fingerprint",
-    image: "/public/cerradura_t1.png", 
+    image: "/cerradura_t1.png", 
     specs: [
       { icon: Fingerprint, label: "Huella dactilar" },
       { icon: KeyRound, label: "Código y tarjeta" },
@@ -23,7 +23,7 @@ const PRODUCTS = [
   {
     brand: "Tuya",
     model: "Smart Lock T5",
-    image: "/public/cerradura_t2.png",
+    image: "/cerradura_t2.png",
     specs: [
       { icon: Fingerprint, label: "Huella dactilar" },
       { icon: KeyRound, label: "App remota" },
@@ -33,7 +33,7 @@ const PRODUCTS = [
   {
     brand: "TTLock",
     model: "Access Pro",
-    image: "/public/cerradura_t3.png",
+    image: "/cerradura_t3.png",
     specs: [
       { icon: KeyRound, label: "Código y tarjeta" },
       { icon: Fingerprint, label: "Huella dactilar" },
@@ -43,7 +43,7 @@ const PRODUCTS = [
   {
     brand: "Tuya",
     model: "Wi-Fi Deadbolt",
-    image: "/public/cerradura_t4.png",
+    image: "/cerradura_t4.png",
     specs: [
       { icon: KeyRound, label: "App remota" },
       { icon: Fingerprint, label: "Huella dactilar" },
@@ -53,7 +53,7 @@ const PRODUCTS = [
   {
     brand: "Tuya",
     model: "Smart Padlock",
-    image: "/public/cerradura_t5.png",
+    image: "/cerradura_t5.png",
     specs: [
       { icon: KeyRound, label: "Código y app" },
       { icon: Droplets, label: "Uso exterior" },
