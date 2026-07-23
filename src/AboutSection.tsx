@@ -1,27 +1,31 @@
-import { User } from "lucide-react";
 import { useInView } from "./hooks/useInView";
 
-// TODO: reemplaza estos hitos con tu trayectoria real (años y logros).
-const TIMELINE = [
+// TODO: ajusta estos pasos a tu proceso real de instalación.
+const PROCESS = [
   {
-    year: "2019",
-    title: "Primeras instalaciones",
-    text: "Empecé resolviendo problemas de acceso para vecinos y conocidos.",
+    step: "01",
+    title: "Diagnóstico",
+    text: "Evalúo tu puerta, cerradura actual y necesidades de acceso — en sitio o por fotos/video.",
   },
   {
-    year: "2021",
-    title: "Certificación TTLock",
-    text: "Formalicé el oficio con certificación oficial en cerraduras digitales TTLock.",
+    step: "02",
+    title: "Selección del sistema",
+    text: "Te recomiendo el modelo TTLock o Tuya ideal según huella, código, tarjeta o control remoto.",
   },
   {
-    year: "2023",
-    title: "Especialización en Tuya",
-    text: "Sumé el ecosistema Tuya para ofrecer automatización completa del hogar.",
+    step: "03",
+    title: "Instalación",
+    text: "Instalo la cerradura y configuro la app, usuarios y métodos de acceso el mismo día.",
   },
   {
-    year: "Hoy",
-    title: "+150 instalaciones",
-    text: "Sigo aprendiendo, certificándome y mejorando cada instalación que hago.",
+    step: "04",
+    title: "Prueba y entrega",
+    text: "Verificamos juntos que todo funcione, y te explico el uso antes de irme.",
+  },
+  {
+    step: "05",
+    title: "Soporte post-instalación",
+    text: "Quedo disponible si surge cualquier duda o ajuste después de la instalación.",
   },
 ];
 
@@ -44,14 +48,11 @@ function AboutSection() {
           }`}
         >
           <div className="relative aspect-[4/5] w-full overflow-hidden border border-white/10 bg-white/[0.03]">
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full border border-gold/30 bg-gold/5">
-                <User className="h-7 w-7 text-gold" />
-              </div>
-              <span className="font-inter text-[10px] uppercase tracking-widest text-muted">
-                Foto próximamente
-              </span>
-            </div>
+            <img
+              src="/franklin.jpg"
+              alt="Franklin Palacio"
+              className="h-full w-full object-cover object-top"
+            />
             {/* subtle corner glow to keep the accent language alive */}
             <div className="pointer-events-none absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-accent/10 blur-3xl" />
           </div>
@@ -72,55 +73,54 @@ function AboutSection() {
             </h2>
 
             <p className="mt-6 max-w-xl font-inter text-sm leading-relaxed text-foreground sm:text-base">
-              Soy Franklin Palacio. Empecé en el mundo de la seguridad
-              electrónica resolviendo problemas puntuales para vecinos y
-              conocidos — con el tiempo esa curiosidad se convirtió en una
-              especialización. Hoy diseño e instalo sistemas de acceso
-              inteligente para hogares, oficinas y empresas.
+              lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.
             </p>
             <p className="mt-4 max-w-xl font-inter text-sm leading-relaxed text-muted sm:text-base">
-              No trabajo con cualquier cerradura: elijo TTLock y Tuya porque
-              son los sistemas que mejor equilibran seguridad real y
-              facilidad de uso, sin sacrificar ninguna de las dos cosas por
-              la otra.
+              lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.
             </p>
           </div>
 
-          {/* Timeline */}
-          <div ref={timelineRef} className="mt-12 space-y-8">
-            {TIMELINE.map((item, i) => (
-              <div
-                key={item.year}
-                className="flex gap-5 transition-all duration-700"
-                style={{
-                  transitionDelay: `${i * 120}ms`,
-                  opacity: timelineInView ? 1 : 0,
-                  transform: timelineInView
-                    ? "translateY(0)"
-                    : "translateY(16px)",
-                }}
-              >
-                <div className="flex flex-col items-center">
-                  <div className="h-2.5 w-2.5 shrink-0 rounded-full bg-accent shadow-glow-sm" />
-                  {i < TIMELINE.length - 1 && (
-                    <div className="mt-1 w-px flex-1 bg-white/10" />
-                  )}
-                </div>
-                <div className="pb-2">
-                  <div className="flex items-baseline gap-3">
-                    <span className="font-podium text-lg uppercase tracking-tight text-accent">
-                      {item.year}
-                    </span>
-                    <span className="font-inter text-sm font-semibold uppercase tracking-wide text-foreground">
-                      {item.title}
-                    </span>
+          {/* Process */}
+          <div ref={timelineRef} className="mt-12">
+            <span className="font-inter text-xs uppercase tracking-[0.3em] text-accent">
+              Cómo trabajo
+            </span>
+
+            <div className="mt-6 space-y-8">
+              {PROCESS.map((item, i) => (
+                <div
+                  key={item.step}
+                  className="flex gap-5 transition-all duration-700"
+                  style={{
+                    transitionDelay: `${i * 120}ms`,
+                    opacity: timelineInView ? 1 : 0,
+                    transform: timelineInView
+                      ? "translateY(0)"
+                      : "translateY(16px)",
+                  }}
+                >
+                  <div className="flex flex-col items-center">
+                    <div className="h-2.5 w-2.5 shrink-0 rounded-full bg-accent shadow-glow-sm" />
+                    {i < PROCESS.length - 1 && (
+                      <div className="mt-1 w-px flex-1 bg-white/10" />
+                    )}
                   </div>
-                  <p className="mt-1 max-w-md font-inter text-sm leading-relaxed text-muted">
-                    {item.text}
-                  </p>
+                  <div className="pb-2">
+                    <div className="flex items-baseline gap-3">
+                      <span className="font-podium text-lg uppercase tracking-tight text-accent">
+                        {item.step}
+                      </span>
+                      <span className="font-inter text-sm font-semibold uppercase tracking-wide text-foreground">
+                        {item.title}
+                      </span>
+                    </div>
+                    <p className="mt-1 max-w-md font-inter text-sm leading-relaxed text-muted">
+                      {item.text}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

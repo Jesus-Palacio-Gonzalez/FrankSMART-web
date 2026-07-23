@@ -14,6 +14,10 @@ function Footer() {
             <span className="font-podium text-2xl font-bold uppercase tracking-wider text-foreground">
               FRANKSMART
             </span>
+            <p className="mt-2 max-w-xs font-inter text-sm text-muted">
+              Cerraduras inteligentes TTLock y Tuya, instaladas con
+              precisión.
+            </p>
           </div>
 
           <a
@@ -55,9 +59,9 @@ function Footer() {
             </a>
 
             <p className="flex items-center gap-1.5 font-inter text-xs text-muted">
-              Con
+              Hecho con
               <Heart className="h-3.5 w-3.5 fill-accent text-accent" />
-              by{" "}
+              por{" "}
               <span className="font-semibold text-foreground">
                 PalacioTECH
               </span>

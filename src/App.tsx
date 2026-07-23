@@ -1,3 +1,4 @@
+import AnnouncementBar from "./AnnouncementBar";
 import Hero from "./Hero";
 import AboutSection from "./AboutSection";
 import ProjectsSection from "./ProjectsSection";
@@ -8,6 +9,7 @@ import Footer from "./Footer";
 function App() {
   return (
     <div className="bg-background">
+      <AnnouncementBar />
       <Hero />
       <AboutSection />
       <ProjectsSection />

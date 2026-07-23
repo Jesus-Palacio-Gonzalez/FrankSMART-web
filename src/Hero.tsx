@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { ArrowUpRight, Award, Crown, X } from "lucide-react";
 import { buildWhatsAppLink } from "./lib/whatsapp";
-import { NAV_LINKS } from "./lib/navLinks";
+
+const NAV_LINKS = [
+  { label: "Proyectos", href: "#proyectos" },
+  { label: "Acerca de mi", href: "#acerca" },
+  { label: "Ofertas", href: "#ofertas" },
+  { label: "Soporte", href: "#soporte" },
+];
 
 const VIDEO_URL = "/herosection.mp4";
 
@@ -84,7 +90,7 @@ function Hero() {
           </h1>
 
           <p className="mt-4 max-w-md animate-fade-up-delay-2 font-inter text-sm leading-relaxed text-foreground sm:text-base lg:mt-6">
-            Franklin Palacio, especialista en cerraduras digitales TTLock y Tuya para hogares, oficinas y empresas.
+            Franklin Palacio, especialista en instalacion de cerraduras digitales TTLock y Tuya para hogares, oficinas y empresas.
             <br />
             <br />
             Instalo, configuro y dejo todo listo para que controles tus accesos desde el celular.

@@ -4,10 +4,16 @@ import { buildWhatsAppLink } from "./lib/whatsapp";
 
 // TODO: reemplaza estos productos con tu catálogo real
 // (foto, marca, modelo y specs clave de cada uno).
+//
+// Para la imagen puedes usar:
+// 1) Una ruta local importada: import g3 from "./assets/ttlock-g3.jpg"; luego image: g3
+// 2) Una ruta desde la carpeta /public: image: "/images/ttlock-g3.jpg"
+// 3) Una URL externa: image: "https://tu-cdn.com/ttlock-g3.jpg"
 const PRODUCTS = [
   {
     brand: "TTLock",
     model: "G3 Fingerprint",
+    image: "/public/cerradura_t1.png", 
     specs: [
       { icon: Fingerprint, label: "Huella dactilar" },
       { icon: KeyRound, label: "Código y tarjeta" },
@@ -17,6 +23,7 @@ const PRODUCTS = [
   {
     brand: "Tuya",
     model: "Smart Lock T5",
+    image: "/public/cerradura_t2.png",
     specs: [
       { icon: Fingerprint, label: "Huella dactilar" },
       { icon: KeyRound, label: "App remota" },
@@ -26,6 +33,7 @@ const PRODUCTS = [
   {
     brand: "TTLock",
     model: "Access Pro",
+    image: "/public/cerradura_t3.png",
     specs: [
       { icon: KeyRound, label: "Código y tarjeta" },
       { icon: Fingerprint, label: "Huella dactilar" },
@@ -35,6 +43,7 @@ const PRODUCTS = [
   {
     brand: "Tuya",
     model: "Wi-Fi Deadbolt",
+    image: "/public/cerradura_t4.png",
     specs: [
       { icon: KeyRound, label: "App remota" },
       { icon: Fingerprint, label: "Huella dactilar" },
@@ -44,6 +53,7 @@ const PRODUCTS = [
   {
     brand: "Tuya",
     model: "Smart Padlock",
+    image: "/public/cerradura_t5.png",
     specs: [
       { icon: KeyRound, label: "Código y app" },
       { icon: Droplets, label: "Uso exterior" },
@@ -106,12 +116,33 @@ function OffersSection() {
                   : "translateY(20px)",
               }}
             >
-              <div className="border border-white/10 bg-white/[0.03] transition-all duration-300 ease-out hover:scale-[1.03] hover:border-accent/40 hover:shadow-glow-sm">
-                {/* Placeholder image */}
-                <div className="relative flex aspect-[4/3] items-center justify-center border-b border-white/10">
-                  <Package className="h-10 w-10 text-white/15" />
-                  <span className="absolute right-3 top-3 border border-gold/30 bg-gold/10 px-2.5 py-1 font-inter text-[9px] uppercase tracking-widest text-gold">
-                    Disponible por encargo
+              <div className="group border border-white/10 bg-white/[0.03] transition-all duration-300 ease-out hover:scale-[1.03] hover:border-accent/40 hover:shadow-glow-sm">
+                {/* Product image */}
+                <div className="relative aspect-[4/3] overflow-hidden border-b border-white/10 bg-white/[0.02]">
+                  {product.image ? (
+                    <img
+                      src={product.image}
+                      alt={`${product.brand} ${product.model}`}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                      onError={(e) => {
+                        // Si la imagen falla, oculta el <img> y muestra el ícono placeholder
+                        e.currentTarget.style.display = "none";
+                        e.currentTarget.nextElementSibling?.classList.remove(
+                          "hidden"
+                        );
+                      }}
+                    />
+                  ) : null}
+                  <div
+                    className={`${
+                      product.image ? "hidden" : "flex"
+                    } absolute inset-0 items-center justify-center`}
+                  >
+                    <Package className="h-10 w-10 text-white/15" />
+                  </div>
+                  <span className="absolute right-3 top-3 border border-black/30 bg-gold/10 px-2.5 py-1 font-inter text-[9px] uppercase tracking-widest text-black/80">
+                    Imagen de referencia
                   </span>
                 </div>
 
