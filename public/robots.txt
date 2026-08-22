@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /private/
+Disallow: /api/
+
+Sitemap: https://franksmart.com/sitemap.xml

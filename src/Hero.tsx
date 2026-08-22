@@ -79,13 +79,13 @@ function Hero() {
 
           <h1 className="animate-fade-up-delay-1 font-podium uppercase leading-[0.92] tracking-tight">
             <span className="block text-[clamp(2.2rem,6vw,5.5rem)] text-foreground">
-              Control
+              Instalación
             </span>
             <span className="block text-[clamp(2.2rem,6vw,5.5rem)] text-foreground">
-              y acceso
+              de cerraduras
             </span>
             <span className="block text-[clamp(2.2rem,6vw,5.5rem)] text-accent">
-              seguro.
+              inteligentes.
             </span>
           </h1>
 

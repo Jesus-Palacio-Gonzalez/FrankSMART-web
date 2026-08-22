@@ -5,10 +5,12 @@ import ProjectsSection from "./ProjectsSection";
 import OffersSection from "./OffersSection";
 import SupportSection from "./SupportSection";
 import Footer from "./Footer";
+import Seo from "./Seo";
 
 function App() {
   return (
     <div className="bg-background">
+      <Seo />
       <AnnouncementBar />
       <Hero />
       <AboutSection />

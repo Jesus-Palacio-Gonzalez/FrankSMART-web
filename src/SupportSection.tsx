@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { useInView } from "./hooks/useInView";
+import Seo from "./Seo";
 
-// TODO: ajusta preguntas/respuestas a tu operación real
-// (tiempos, garantía, zonas de cobertura, etc.)
 const FAQS = [
   {
     question: "¿Qué pasa si se va la luz?",
@@ -37,13 +36,31 @@ function SupportSection() {
   const { ref: introRef, inView: introInView } = useInView<HTMLDivElement>();
   const { ref: listRef, inView: listInView } = useInView<HTMLDivElement>(0.05);
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <section
       id="soporte"
       className="relative bg-background px-6 py-20 sm:px-10 sm:py-28 lg:px-16 lg:py-32"
     >
+      <Seo
+        title="Soporte"
+        description="Resolvemos tus dudas sobre instalación de cerraduras digitales TTLock y Tuya. Preguntas frecuentes sobre garantía, compatibilidad y funcionamiento."
+        canonical="https://franksmart.com/#soporte"
+        schema={faqSchema}
+      />
       <div className="mx-auto max-w-3xl">
-        {/* Intro */}
         <div
           ref={introRef}
           className={introInView ? "animate-fade-up" : "opacity-0"}
@@ -60,7 +77,6 @@ function SupportSection() {
           </p>
         </div>
 
-        {/* Accordion */}
         <div
           ref={listRef}
           className="mt-12 divide-y divide-white/10 border-t border-white/10 lg:mt-16"
