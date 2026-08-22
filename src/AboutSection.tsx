@@ -73,10 +73,7 @@ function AboutSection() {
             </h2>
 
             <p className="mt-6 max-w-xl font-inter text-sm leading-relaxed text-foreground sm:text-base">
-              lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.
-            </p>
-            <p className="mt-4 max-w-xl font-inter text-sm leading-relaxed text-muted sm:text-base">
-              lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.
+              Soy Franklin Palacio, instalador de cerraduras digitales y redes de acceso. Me apasiona la seguridad y la tecnología, y me dedico a ofrecer soluciones confiables y eficientes para proteger tu hogar o negocio. Con mas de 5 años de experiencia en el campo, garantizo un servicio profesional y personalizado para cada cliente.
             </p>
           </div>
 

@@ -1,6 +1,7 @@
 import { ArrowUpRight, Heart } from "lucide-react";
 import { NAV_LINKS } from "./lib/navLinks";
 import { buildWhatsAppLink } from "./lib/whatsapp";
+import { SOCIAL_LINKS } from "./lib/socials.tsx";
 
 function Footer() {
   const year = new Date().getFullYear();
@@ -29,6 +30,22 @@ function Footer() {
             Hablemos
             <ArrowUpRight className="h-4 w-4 transition-colors group-hover:text-accent" />
           </a>
+        </div>
+
+        {/* Social icons */}
+        <div className="flex items-center gap-4 sm:gap-5">
+          {SOCIAL_LINKS.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={link.name}
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-muted transition-all duration-200 hover:border-accent/60 hover:text-accent hover:bg-accent/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            >
+              {link.icon}
+            </a>
+          ))}
         </div>
 
         {/* Quick nav */}

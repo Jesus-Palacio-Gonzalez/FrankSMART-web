@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { label: "Soporte", href: "#soporte" },
 ];
 
-const VIDEO_URL = "/herosection.mp4";
+const VIDEO_URL = "/hero_sec.mp4";
 
 function Hero() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -50,7 +50,7 @@ function Hero() {
           </div>
 
           <a
-            href="#"
+            href="https://api.whatsapp.com/send/?phone=%2B573042852625&text=Hola%2C+quiero+m%C3%A1s+informaci%C3%B3n.&type=phone_number&app_absent=0"
             className="group hidden items-center gap-2 border border-white/15 px-6 py-3 font-inter text-xs uppercase tracking-widest text-foreground transition hover:border-accent/60 hover:bg-accent/5 md:flex"
           >
             Contactame

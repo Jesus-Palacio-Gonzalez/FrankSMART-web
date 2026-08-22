@@ -61,6 +61,20 @@
     }
   }
 
+  @keyframes scroll-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-scroll-left {
+    animation: scroll-left 12s linear infinite;
+    white-space: nowrap;
+  }
+
   .animate-fade-up {
     opacity: 0;
     animation: fade-up 0.8s ease-out forwards;

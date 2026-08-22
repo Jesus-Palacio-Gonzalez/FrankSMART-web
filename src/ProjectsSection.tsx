@@ -1,15 +1,59 @@
-import { ImageIcon } from "lucide-react";
+import ProjectVideoPlayer from "./components/ProjectVideoPlayer";
 import { useInView } from "./hooks/useInView";
 
 // TODO: reemplaza estos placeholders con tus proyectos reales
 // (foto/video, tipo de espacio y modelo instalado).
-const PROJECTS = [
-  { spaceType: "Apartamento residencial", model: "TTLock G3" },
-  { spaceType: "Oficina corporativa", model: "Tuya Smart Lock T5" },
-  { spaceType: "Local comercial", model: "TTLock Fingerprint FP" },
-  { spaceType: "Casa unifamiliar", model: "Tuya Wi-Fi Deadbolt" },
-  { spaceType: "Edificio de oficinas", model: "TTLock Access Pro" },
-  { spaceType: "Bodega / depósito", model: "Tuya Smart Padlock" },
+type Project = {
+  spaceType: string;
+  model: string;
+  videoSrc: string;
+  videoSrcWebm?: string;
+  posterSrc?: string;
+};
+
+const PROJECTS: Project[] = [
+  {
+    spaceType: "Apartamento residencial",
+    model: "TTLock G3",
+    videoSrc: "/videos/apartamento-ttlock.mp4",
+    videoSrcWebm: "/videos/apartamento-ttlock.mp4",
+    posterSrc: "/videos/apartamento-ttlock-poster.mp4",
+  },
+  {
+    spaceType: "Oficina corporativa",
+    model: "Tuya Smart Lock T5",
+    videoSrc: "/videos/corporativa.mp4",
+    videoSrcWebm: "/videos/corporativa.mp4",
+    posterSrc: "/videos/corporativa-poster.jpg",
+  },
+  {
+    spaceType: "Oficina comercial",
+    model: "TTLock Fingerprint FP",
+    videoSrc: "/public/videos/local_comercial.mp4",
+    videoSrcWebm: "/public/videos/local_comercial.mp4",
+    posterSrc: "/public/videos/local_comercial.mp4",
+  },
+  {
+    spaceType: "Casa unifamiliar",
+    model: "Tuya Smart Padlock",
+    videoSrc: "/videos/casa-tuya-deadbolt.mp4",
+    videoSrcWebm: "/videos/casa-tuya-deadbolt.mp4",
+    posterSrc: "/videos/casa-tuya-deadbolt-poster.jpg",
+  },
+  {
+    spaceType: "Edificio de oficinas",
+    model: "TTLock Access Pro",
+    videoSrc: "/videos/edificio-ttlock-access.mp4",
+    videoSrcWebm: "/videos/edificio-ttlock-access.mp4",
+    posterSrc: "/videos/edificio-ttlock-access-poster.jpg",
+  },
+  {
+    spaceType: "Local Comercial",
+    model: "Tuya Tuya Smart Lock T7",
+    videoSrc: "/videos/bodega-tuya-padlock.mp4",
+    videoSrcWebm: "/videos/bodega-tuya-padlock.mp4",
+    posterSrc: "/videos/bodega-tuya-padlock-poster.jpg",
+  },
 ];
 
 function ProjectsSection() {
@@ -57,10 +101,13 @@ function ProjectsSection() {
               }}
             >
               <div className="relative aspect-[4/3] overflow-hidden border border-white/10 bg-white/[0.03] transition-all duration-300 ease-out group-hover:scale-[1.03] group-hover:border-accent/50 group-hover:shadow-glow-sm">
-                {/* Placeholder image area */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <ImageIcon className="h-10 w-10 text-white/15" />
-                </div>
+                {/* Video area with lazy loading */}
+                <ProjectVideoPlayer
+                  src={project.videoSrc}
+                  srcWebm={project.videoSrcWebm}
+                  poster={project.posterSrc}
+                  className="absolute inset-0"
+                />
 
                 {/* Hover glow */}
                 <div className="pointer-events-none absolute -bottom-8 -right-8 h-32 w-32 rounded-full bg-accent/0 blur-2xl transition-all duration-300 group-hover:bg-accent/20" />

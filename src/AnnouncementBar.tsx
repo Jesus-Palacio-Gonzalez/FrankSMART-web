@@ -7,14 +7,9 @@ function AnnouncementBar() {
   if (!visible) return null;
 
   return (
-    <div className="relative flex items-center justify-center gap-2.5 border-b border-white/10 bg-white/[0.04] px-10 py-2.5 text-center">
-      <span className="relative flex h-2 w-2 shrink-0">
-        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
-        <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-      </span>
-
-      <p className="font-inter text-[11px] uppercase tracking-widest text-muted sm:text-xs">
-        Este sitio está en construcción — algunos contenidos son de ejemplo
+    <div className="relative flex items-center justify-center border-b border-white/10 bg-white/[0.04] px-10 py-2.5 text-center overflow-hidden">
+      <p className="animate-scroll-left font-inter text-[11px] uppercase tracking-widest text-accent sm:text-xs">
+        <span className="tracking-[0.2em]"></span> Cerraduras inteligentes, controles de acceso y video porteros
       </p>
 
       <button
